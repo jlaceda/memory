@@ -16,16 +16,13 @@ class Memory extends React.Component {
     })
   }
   shuffle(array) {
-    function swap(a, b, arr) {
-      let temp = arr[a];
-      arr[a] = arr[b];
-      arr[b] = temp;
-    }
     let _array = array;
     let n = _array.length;
     for (let i = 0; i < n; i++) {
       let r = Math.floor(Math.random() * Math.floor(n));
-      swap(i, r, _array);
+      let temp = _array[i];
+      _array[i] = _array[r];
+      _array[r] = temp;
     }
     return _array;
   }
@@ -35,7 +32,7 @@ class Memory extends React.Component {
     if (_state.topScore < _state.score) {
       _state.topScore = _state.score
     }
-    if (_state.selected.includes(_name)) {
+    if (_state.selected.includes(_name) || _state.score === 9) {
       _state.score = 0;
       _state.selected = [];
     } else {
