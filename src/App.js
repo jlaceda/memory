@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Memory from "./components/Memory";
 
 function App() {

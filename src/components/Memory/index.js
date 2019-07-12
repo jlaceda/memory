@@ -52,8 +52,15 @@ class Memory extends React.Component {
     }
     return (
       <div>
+        <h1>Chihuahua Memory Game</h1>
+        <ol>
+          <li>Click on a chihuahua</li>
+          <li>Then click on a different chihuahua</li>
+          <li>Game resets if you click on the same chihuahua</li>
+          <li>Try to get a Top Score of 9 chihuahuas</li>
+        </ol>
         <Score score={this.state.score} topScore={this.state.topScore}/>
-        <div className="container" style={style}>
+        <div style={style}>
           {this.state.order.map(id => {
             return <Image 
               key={id}

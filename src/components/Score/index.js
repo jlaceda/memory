@@ -3,7 +3,7 @@ import React from "react";
 function Score(props) {
   return (
     <div>
-      <h2>Score: {props.score} Top Score: {props.topScore}</h2>
+      <h2>Score: {props.score} chihuahuas | Top Score: {props.topScore} chihuahuas</h2>
     </div>
   );
 }
